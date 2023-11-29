@@ -1,6 +1,6 @@
 .navBar{
     width: 100%;
-    height: 40px;
+    height: 50px;
     list-style: none;
     text-decoration: none;
     display: flex;
@@ -9,21 +9,25 @@
 }
 .categorias{ 
     width: 90%;
-    height: 40px;
+    height: 50px;
     display: flex;
-    gap: 30px;
     flex-direction: row;
-    justify-content:space-between;
+    justify-content:space-around;
     list-style: none;
+    align-items: center;
 }
 .tit{
-    margin-right: 30px;
-    width: 100px;
-    height: 40px;
+    width: 300px;
+    height: 50px;
+
 }
 .carrito{
     display: flex;
     flex-direction:row;
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+}
+.contenedor{
+    width: 100%;
+    height: 50px;
 }
