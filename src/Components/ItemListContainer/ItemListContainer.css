@@ -1,0 +1,9 @@
+.nombreTienda{
+    width: 500px;
+    height: 50px;
+    color:indigo;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-left: 10px;
+}

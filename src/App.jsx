@@ -7,9 +7,8 @@ function App() {
     <>
         <NavBar/>
         <ItemListContainer greeting={'Tienda el Arca de Noe'}/>
-        <ItemCount/>
+        <ItemCount initial={1} stock={50}/>
     </>
   )
 }
-
 export default App

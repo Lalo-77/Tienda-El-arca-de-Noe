@@ -1,34 +1,26 @@
 import React, { useEffect, useState } from 'react'
-import {getProducts} from '../../asynMock'
+import {getProducts} from '../../asyncMock'
+import ItemList from '../ItemList/ItemList'
+import '../ItemListContainer/ItemListContainer.css'
+import Principal from '../Principal/Principal'
 
-const ItemListContainer =({greeting}) => {
-    const [products, setProducts] = useState ([])
+const ItemListContainer =({greeting, props}) => {
+    const [products, setProducts] = useState ([]) // se guarda la respuesta
 
     useEffect (() => {
-        getProducts()
-            .then(response =>{
+        getProducts() // retorna una promesa 
+            .then(response => {
                 setProducts(response) // una vez que tengo la resp despues la tengo que mostrar
             })
     }, [])
-    console.log(products);
-
-    const productsComponents = products.map(products => { 
-
-        return (// card de cada producto
-            <div> 
-                <h2>{products.name}</h2> 
-            </div>
-        )
-    })
-    return ( // es una mascara del virtual dom
-        <div>
-            <h1>{greeting}</h1>
-            {productsComponents}
-        </div>
-    
-
-
-    )
-}
+        console.log(products);
+            return ( // es una mascara del virtual dom
+                <div className='contenedor'>
+                    <h1 className='nombreTienda'>{greeting}</h1>
+                    <Principal/>
+                    <ItemList products={products}/>
+                </div>
+            )
+        }
 
 export default ItemListContainer

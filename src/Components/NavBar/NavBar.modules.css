@@ -1,5 +1,5 @@
 .navBar{
-    width: 100%;
+    width: 1900px;
     height: 50px;
     list-style: none;
     text-decoration: none;
@@ -15,11 +15,15 @@
     justify-content:space-around;
     list-style: none;
     align-items: center;
+    font-size: 20px;
+}
+a:hover{
+    color: darkseagreen;
 }
 .tit{
     width: 300px;
-    height: 50px;
-
+    height: 40px;
+    color:cornflowerblue;
 }
 .carrito{
     display: flex;
@@ -29,5 +33,5 @@
 }
 .contenedor{
     width: 100%;
-    height: 50px;
+    height: 900px;
 }

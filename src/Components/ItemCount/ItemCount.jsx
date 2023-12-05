@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import '../ItemCount/ItemCount.css'
 
 const ItemCount = () => {
     const [count, setCount] = useState(0)
@@ -15,7 +16,7 @@ const ItemCount = () => {
         }
     } 
     return (
-    <div>
+    <div className='contador'>
         <span>{count}</span>
         <button onClick={bajar}>bajar</button>
         <h1>Agregar al Carrito</h1>
