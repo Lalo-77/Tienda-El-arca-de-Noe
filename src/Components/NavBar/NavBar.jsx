@@ -8,6 +8,9 @@ const NavBar = () => {
         <header>
             <nav className='Contenedor'>
                     <ul className='navBar'>
+                        <div>
+                            <a>logo</a>
+                        </div>
                         <li className='categorias'>
                             <h1 className='tit'>Tienda de Mascotas</h1>
                             <a>Juguetes</a>

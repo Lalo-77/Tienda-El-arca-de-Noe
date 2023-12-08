@@ -1,4 +1,7 @@
 .contador{
     width: 400px;
     height: 400px;
+    display: flex-column;
+    align-items: center;
+    justify-content:center ;
 }
