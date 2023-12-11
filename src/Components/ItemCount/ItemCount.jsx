@@ -1,31 +1,28 @@
 import React, { useState } from 'react'
 import '../ItemCount/ItemCount.css'
 
-const ItemCount = ({stock, onAdd, initial}) => {
+const ItemCount = ({stock=50, onAdd, initial=1}) => {
     const [count, setCount] = useState(initial)
 
     const bajar = () => {
-        setCount(count -1)
-        if(count > 0) {
+        if(count > 1) {
             setCount(count - 1)
         }
     }
-    const subir = () =>{
-        setCount(count + 1)
-        if(count < 50) {
+    const subir = () => {
+        if(count  < stock) {
             setCount(count + 1)
         }
-    } 
+    }
     return (
-        <div>
+        <div className='sup-cont'>
             <div className='contador'>
-                <button onClick={bajar}>-</button>
+                <button className='bajar' onClick={bajar}>-</button>
                 <span className='contad'>{count}</span>
-                <button onClick={subir}>+</button>
+                <button className='subir' onClick={subir}>+</button>
             </div>
-                <button className='comprar'disabled={count === 0} onClick={()=> onAdd(count)}>Comprar</button>
-        </div>
+                <button className='comprar' onClick={()=>onAdd(count)}>Comprar</button>
+        </div>  
     )
 }
-
 export default ItemCount
