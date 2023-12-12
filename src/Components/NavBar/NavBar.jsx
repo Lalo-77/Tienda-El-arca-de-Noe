@@ -7,7 +7,8 @@ import { Link, NavLink } from 'react-router-dom'
 const NavBar = () => {
     return (
             <nav className='navBar'>
-                            <Link as={NavLink} to={'/'} className='link' >logo</Link>
+                            <Link as={NavLink} to={'/'} className='link' >El Arca de Noe</Link>
+                            <img className='barco' src='../../../public/img/barco.png' alt='logo'/>
                         <section className='categorias'>
                             <h1 className='tit'>Tienda de Mascotas</h1>
                             <Link as={NavLink} to={'/category/accesorios'} className='accesorios'>Accesorios</Link>

@@ -9,9 +9,9 @@ function App() {
     <BrowserRouter>
         <NavBar/>
         <Routes>
-          <Route path='/' element={ <ItemListContainer greeting={'Tienda el Arca de Noe'}/>} />
-          <Route path='/category/:categoryId' element={<ItemListContainer greeting='Bienvenido a la categoria:'/>}/>
-          <Route path='/item/:id' element={ <ItemDetailContainer/> }/>
+          <Route exact path='/' element={ <ItemListContainer greeting={'Tienda el Arca de Noe'}/>} />
+          <Route exact path='/category/:categoryId' element={<ItemListContainer greeting='Bienvenido a la categoria:'/>}/>
+          <Route exact path='/item/:id' element={ <ItemDetailContainer/> }/>
         </Routes>
     </BrowserRouter>
   )
