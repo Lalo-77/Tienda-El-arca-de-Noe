@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState,useContext } from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import Cart from '../Cart/Cart'
 import './ItemDetail.css'
@@ -8,6 +8,7 @@ const ItemDetail = ({producto}) => {
     const onAdd =(cantidad) => {
         console.log(`comprastre ${cantidad} productos`);
     }
+    //  aca va function que se va a ejecutar al hacer click par agregar al carrito 
     return (  
         <div className='tarj'>
             <h3 className='detalle'>Detalle de: {producto.name}</h3>

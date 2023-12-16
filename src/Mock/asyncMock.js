@@ -11,7 +11,7 @@ const productos = [
     {
     id:'02',
     name:'bebedero',
-    img:'../../img/bebedero automatico.bmp',
+    img:'../img/bebedero automatico.bmp',
     price: 1559,
     category: 'accesorios',
     stock: 50,
@@ -20,8 +20,7 @@ const productos = [
     {
     id:'03',
     name:'bebedero hamster',
-    img:'../../img/bebedero hamster.bmp',
-    price: 1914,
+    img:'../../public/img/bebedero automatico.bmp',
     category: 'accesorios',
     stock: 50,
     description:'acrilico, con pico acero 80 ml',
@@ -225,7 +224,7 @@ const productos = [
     description: 'zapatillas para mascota, talle s al xl'
     }
 ]
-export const getProducts = () => {
+export const getProducts = () => { 
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve(productos)

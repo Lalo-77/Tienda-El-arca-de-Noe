@@ -7,9 +7,11 @@ import { useParams } from 'react-router-dom'
 
 const ItemListContainer =({greeting}) => {
     const [products, setProducts] = useState ([]) // se guarda la respuesta
+    const [loading, setLoading] = useState(false)
     const {categoryId}= useParams ()
 
     useEffect (() => {
+        setLoading(true)
         getProducts() // retorna una promesa setProducts(resp) 
             .then((resp) =>{
                 if(categoryId){
@@ -19,15 +21,19 @@ const ItemListContainer =({greeting}) => {
                 }
             })
             .catch((error)=> console.log(error))
+            .finally(()=> setLoading(false))
     }, [categoryId])
     
             return ( // es una mascara del virtual dom
-                <div className='contenedor'>
+            <div>
+                { loading ? <p>Cargando ...</p>
+                : <div className='contenedor'>
                     <h1 style={{width:1000}} className='nombreTienda'>{greeting} <span>{categoryId && categoryId}</span></h1>
                     <Principal/>
                     <ItemList products={products}/>
                 </div>
+            }
+            </div>
             )
         }
-
 export default ItemListContainer
