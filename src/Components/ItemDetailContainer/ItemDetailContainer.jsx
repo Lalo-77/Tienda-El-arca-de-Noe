@@ -4,10 +4,10 @@ import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {
-    const [producto, setProducto] =useState ({})
+    const [producto, setProducto] = useState ({})
     const { id } = useParams () // trae el dato que yo quiero
     
-    useEffect (() =>{ //llamar a la funcion que llama a getItem
+    useEffect (() =>{ // llamar a la funcion que llama a getItem
         getItem(id)
         .then((resp)=> setProducto (resp))
         .catch((error)=> console.log(error))

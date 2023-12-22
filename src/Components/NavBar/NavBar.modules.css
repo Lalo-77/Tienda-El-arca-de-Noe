@@ -19,21 +19,26 @@
 }
 .accesorios{
     text-decoration: none;
+    color: deepskyblue;
 }
 .juguetes{
     text-decoration: none;
+    color: deepskyblue;
 }
 .limpieza{
     text-decoration: none;
+    color: deepskyblue;
 }
 .ropa{
     text-decoration: none;
+    color: deepskyblue;
 }
 .servicios{
     text-decoration: none;
+    color: deepskyblue;
 }
 a:hover{
-    color: darkseagreen;
+    color:crimson;
 }
 .tit{
     width: 300px;
@@ -48,6 +53,7 @@ a:hover{
 }
 .link{
     width: 130px;
+    color:deepskyblue ;
     text-decoration: none;
     font-weight: 20px;
     font-size: 15px;

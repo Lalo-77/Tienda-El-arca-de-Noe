@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import '../ItemCount/ItemCount.css'
 
-const ItemCount = ({stock=50, onAdd, initial=1}) => {
-    const [count, setCount] = useState(initial)
+const ItemCount = ({stock=50, onAdd, initial=1,removeItem}) => {
+    const [count, setCount] = useState(initial);
+    const [elec, setElect] = useState ()
+    const [cart, setCart] = useState ()
 
     const bajar = () => {
         if(count > 1) {
@@ -21,7 +23,11 @@ const ItemCount = ({stock=50, onAdd, initial=1}) => {
                 <span className='contad'>{count}</span>
                 <button className='subir' onClick={subir}>+</button>
             </div>
-                <button className='comprar' onClick={()=>onAdd(count)}>Comprar</button>
+                <button className='comprar' onClick={ ()=> onAdd(count)} > Comprar </button>
+{elec && (
+                <button className='finalComp' onClick={() => {addItem({elec, cantidad})}}> Finalizar Compra </button>
+        )}
+                <button className='eliminar' onClick={() => {removeItem(cart.id)}}> Eliminar Producto</button>
         </div>  
     )
 }

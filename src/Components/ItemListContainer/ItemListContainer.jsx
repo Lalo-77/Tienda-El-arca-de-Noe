@@ -25,7 +25,7 @@ const ItemListContainer =({greeting}) => {
     }, [categoryId])
     
             return ( // es una mascara del virtual dom
-            <div>
+            <>
                 { loading ? <p>Cargando ...</p>
                 : <div className='contenedor'>
                     <h1 style={{width:1000}} className='nombreTienda'>{greeting} <span>{categoryId && categoryId}</span></h1>
@@ -33,7 +33,7 @@ const ItemListContainer =({greeting}) => {
                     <ItemList products={products}/>
                 </div>
             }
-            </div>
+            </>
             )
         }
 export default ItemListContainer

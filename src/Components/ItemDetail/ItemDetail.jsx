@@ -1,6 +1,5 @@
-import React, { useState,useContext } from 'react'
+import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
-import Cart from '../Cart/Cart'
 import './ItemDetail.css'
 
 const ItemDetail = ({producto}) => { 
@@ -8,17 +7,16 @@ const ItemDetail = ({producto}) => {
     const onAdd =(cantidad) => {
         console.log(`comprastre ${cantidad} productos`);
     }
-    //  aca va function que se va a ejecutar al hacer click par agregar al carrito 
+    // aca va function que se va a ejecutat al hacer click para agregar al carrito
     return (  
         <div className='tarj'>
-            <h3 className='detalle'>Detalle de: {producto.name}</h3>
-            <img src={producto.img} alt={producto.name}/>
-            <p>{producto.description}</p>
-            <p>${producto.price}</p>
+            <h3 className='detalle'> Detalle de: {producto.name}</h3>
+            <img className='img' src={producto.img} alt={producto.name}/>
+            <p className='description'>{producto.description}</p>
+            <p className='precio'>${producto.price}</p> 
             <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}/>
-            <Cart/>
         </div>
     )
-}
+} 
 
 export default ItemDetail

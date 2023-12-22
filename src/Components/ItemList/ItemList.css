@@ -1,9 +1,16 @@
 .card{
-    width: 400px;
-    height: 600px;
-    display:flex;
-    flex-direction:row;
-    justify-content:around;
-    align-content: center;
-    flex-wrap: nowrap;
+    display:grid;
+    box-shadow:1px 10px 10px 2px;
+    border: 6px solid transparent;
+    border-radius: 5px;
+    padding: 1rem 1;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit,minmax(22rem,1fr));
+    gap: 3rem 1rem;
+    box-sizing: border-box;
+    align-items: center;
+
+}
+.tarjeta :hover{
+border: 6px solid;
 }

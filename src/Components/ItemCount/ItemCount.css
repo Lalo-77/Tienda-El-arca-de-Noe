@@ -11,6 +11,8 @@
 }
 .bajar{
     background-color:crimson;
+    color:lime;
+    border:none;
     border-radius: 20px;
     width: 50px;
     height: 30px;
@@ -18,20 +20,51 @@
 .contad{
     width: 10px;
     height: 10px;
-    color:blue;
+    color:black;
     padding: 10px;
     font-size:20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 .subir{
     background-color:crimson;
+    color:lime;
+    border:none;
     border-radius: 20px;
     width: 50px;
     height: 30px;
 }
 .comprar{
     background-color:crimson;
+    color:lime;
     border-radius: 20px;
-    width: 70px;
+    gap: 1rem 2rem;
+    width: 100px;
     height: 40px;
+    border:none;
+    outline:0;
+    cursor:pointer;
+    max-width: 250px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.finalComp {
+    background-color:crimson;
+    color:lime;
+    border:none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100px;
+    height: 40px;
+}
+.eliminar{
+    background-color:crimson;
+    color:lime;
+    border:none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 100px;
+    height: 40px; 
+    margin-left: 20px;
 }

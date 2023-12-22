@@ -1,32 +1,37 @@
 .image{
     width: 300px;
     height:300px;
-    padding: 10px;
+    padding-left: 25px;
+    margin-top: 10px;
 }
 .name{
     width: 300px;
     height: 30px;
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 20px;
     color:black;
 }
-.precio{
+.precio {
+    color: black;
     width: 70px;
-    height: 30px;
+    height: 20px;
 }
 .tarjeta{
-    width: 500px;
-    height: 550px;
+    width: 350px;
+    height: 500px;
     background-color: aquamarine;
     display: grid;
+    flex-direction: column;
     text-align:center;
+    align-items: center;
 }
 .verMas{
     width: 100px;
     height: 30px;
     padding-top: 5px;
     background-color: steelblue;
+    color: deepskyblue;
     text-decoration: none;
     border-radius: 20px;
 }
