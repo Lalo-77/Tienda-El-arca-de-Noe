@@ -1,5 +1,5 @@
 .navBar{
-    width: 1900px;
+    width: 2000px;
     height: 50px;
     list-style: none;
     text-decoration: none;
@@ -9,7 +9,7 @@
 }
 .categorias{ 
     width: 90%;
-    height: 50px;
+    height: 50px;  
     display: flex;
     flex-direction: row;
     justify-content:space-around;

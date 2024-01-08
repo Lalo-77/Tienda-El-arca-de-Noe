@@ -1,14 +1,15 @@
-import React, { useState } from 'react'
+import React, { useState, useContext} from 'react'
 import '../ItemCount/ItemCount.css'
+import {CartContext} from '../../Context/CartContext'
 
 const ItemCount = ({stock=50, onAdd, initial=1,removeItem}) => {
     const [count, setCount] = useState(initial);
-    const [elec, setElect] = useState ()
-    const [cart, setCart] = useState ()
+    const [elec, setElec] = useState ();
+    const {cart, setCart} = useState();
 
     const bajar = () => {
         if(count > 1) {
-            setCount(count - 1)
+            setCount(count - 1)  
         }
     }
     const subir = () => {
@@ -19,13 +20,13 @@ const ItemCount = ({stock=50, onAdd, initial=1,removeItem}) => {
     return (
         <div className='sup-cont'>
             <div className='contador'>
-                <button className='bajar' onClick={bajar}>-</button>
+                <button className='bajar' onClick={bajar}>-</button> 
                 <span className='contad'>{count}</span>
                 <button className='subir' onClick={subir}>+</button>
             </div>
-                <button className='comprar' onClick={ ()=> onAdd(count)} > Comprar </button>
+                <button className='comprar'disable={count === 1} onClick={()=>onAdd(count)}> Comprar </button>
 {elec && (
-                <button className='finalComp' onClick={() => {addItem({elec, cantidad})}}> Finalizar Compra </button>
+                <button className='finalComp' onClick={() => {setElec({elec, count})}}> Finalizar Compra </button>
         )}
                 <button className='eliminar' onClick={() => {removeItem(cart.id)}}> Eliminar Producto</button>
         </div>  

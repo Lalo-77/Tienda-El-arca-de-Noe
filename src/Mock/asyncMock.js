@@ -37,15 +37,6 @@ const productos = [
     },
     {
     id:'05',
-    name:'collar',
-    img: '../../img/collar.bmp',
-    price: 3544,
-    category: 'accesorios',
-    stock: 50,
-    description:'collar para gatos y perros con cascabel, colores rojo, plateado, azul, rojo',
-    },
-    {
-    id:'06',
     name:'correa extensible 3m',
     img: '../../img/correa extensible 3m.bmp',
     price: 1914,
@@ -54,13 +45,22 @@ const productos = [
     description:'correa extensible 3 m, economica',
     },
     {
-    id:'07',
+    id:'06',
     name: 'pretal arnes',
     img: '../../img/pretal-arnes.jpg',
     price: 4700,
     category: 'accesorios',
     stock: 30,
     description: 'pretal con arnes mediano',
+    },
+{
+    id:'07',
+    name:'pelota',
+    img: '../../img/pelota.bmp',
+    price: 2570,
+    category: 'juguetes',
+    stock: 30,
+    description:'juguete soga con pelota, 30 cm',
     },
     {
     id:'08',
@@ -136,9 +136,14 @@ const productos = [
     }
 ]
 export const getProducts = () => { 
-    return new Promise((resolve) => {
+    return new Promise((resolve,reject) => {
+        let error = false
         setTimeout(() => {
-            resolve(productos)
+            if (error) {
+                reject('No Hay datos, intente en unos minutos...')
+            }else {
+                resolve(productos)
+            }
         }, 2000)
     })
 }
@@ -147,21 +152,7 @@ export const getItem =(id) =>{ // trae un item
     return new Promise((resolve) =>{
         setTimeout(()=> {
             resolve(productos.find((item) => item.id === id)) // el find devuelve la 1° coincidecia
-        },2000)
+        },2000) // el find trae el elemento que encontro 
     })
-} 
-/*export const getProductsCategory = (categoryId) => {
-    return new Promise((resolve) => {
-        setTimeout(() =>{
-            resolve(productos.filter(prod => prod.category === categoryId))
-        }, 2000)
-    })
-}
+}  
 
-export const getProductsById =(itemId) => {
-    return new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(productos.find(prod => prod.id ===itemId))
-        }, 2000)
-    })
-}*/

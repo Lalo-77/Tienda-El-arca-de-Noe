@@ -8,6 +8,6 @@ const ItemList = ({products}) => {
                 {products.map(product => <Item key={product.id} product={product}/> // spread de product
                     )}
             </div> 
-        )
+        ) 
     }
 export default ItemList
