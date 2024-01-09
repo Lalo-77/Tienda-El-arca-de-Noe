@@ -2,7 +2,7 @@ import React, { useState, useContext} from 'react'
 import '../ItemCount/ItemCount.css'
 import {CartContext} from '../../Context/CartContext'
 
-const ItemCount = ({stock=50, onAdd, initial=1,removeItem}) => {
+const ItemCount = ({stock=50, onAdd, initial=1,removeItem,id}) => {
     const [count, setCount] = useState(initial);
     const [elec, setElec] = useState ();
     const {cart, setCart} = useState();
@@ -28,7 +28,7 @@ const ItemCount = ({stock=50, onAdd, initial=1,removeItem}) => {
 {elec && (
                 <button className='finalComp' onClick={() => {setElec({elec, count})}}> Finalizar Compra </button>
         )}
-                <button className='eliminar' onClick={() => {removeItem(cart.id)}}> Eliminar Producto</button>
+                <button className='eliminar' onClick={() => {removeItem(id)}}> Eliminar Producto</button>
         </div>  
     )
 }

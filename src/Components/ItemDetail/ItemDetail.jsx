@@ -10,12 +10,12 @@ const ItemDetail = ({producto, id,price}) => { // trae el producto
     const {addItem} = CartContext
 
     const onAdd =(cantidad) => {
-    const objProductToAdd = {
+    /*const objProductToAdd = {
         id, name, price, cantidad
     }
-    addItem(objProductToAdd)
+    addItem(objProductToAdd)*/
     console.log(`agregaste al carrito ${cantidad} productos`) 
-    setQuantityAdded (true)
+    //setQuantityAdded (true)
     }
     // aca va function que se va a ejecutar hacer click para agregar al carrito
     return (  

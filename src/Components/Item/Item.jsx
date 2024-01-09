@@ -2,21 +2,6 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import './item.css' 
 
-const [cart, setCart] = useState ({})
-const addToCart = () => {
-    setCart((agregItems) => {
-    const hayEnCar = agregItems.find((item) => item.id === id);
-    if(hayEnCar) {
-    return agregItems.map((item) => {
-    if(item.id === id) {
-    return { ...item, cantidad: item.cantidad + 1};
-    } else {
-    return item;
-    } 
-    }); 
-};
-});
-};
 const Item = ({product})=> { // es un objeto
     
     return (
