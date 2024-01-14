@@ -1,36 +1,40 @@
-import React, { useState, useContext } from 'react'
-import CartContext from '../../Context/CartContext'
+import React, { useState } from 'react'
+import {useCart} from '../../Context/CartContext'
 
-const Checkout = () => {
-    const [user, setUser] = useState ({})
-    const [validateEmail, setValidateEmail]= useState ('')
-const {cart, total, clear} = useContext(CartContext)
-
-    return (
-    <div>
-        <h2>Terminar Compra</h2>
-        <h4> Completar con sus datos Personales</h4>
-        <form onSubmit={finalizarCompra}>
-            <div>
-                <label>Nombre Completo</label>
-                <input onChange={datosComprador}type='text' placeholder='nombre y apellido' name='name'/>
-            </div>
-            <div>
-                <label>Numero de telefono</label>
-                <input onChange={datosComprador}type='number' placeholder='+549003467842' name='phone'/>
-            </div>
-            <div>
-                <label>Direccion de email</label>
-                <input onChange={datosComprador}type='email' placeholder='papa@.com' name='mail'/>
-            </div>
-            <div>
-                <label>Repita su email email</label>
-                <input type='email' placeholder='papa@.com' name='mail' onChange={((e)=>setValidateEmail(e.target.value))}/>
-            </div>
-            <button type='submit'disabled={validateEmail !== user.mail}>Generar Orden</button>
+function Checkout (){
+    const [name, setName]= useState("")
+    const [email, setEmail]= useState("")
+    const [phone, setPhone]= useState("")
+    
+    const [orderId , setOrderId ] = useState();
+    
+    const { cart, total, clear } = useCart ();
+    
+    function crearOrden () {
+    
+    const db = getFirestore()
+    const order= {buyer:{
+            name, email, phone,
+            },
+        };
+    const ordenesRef = collection (db, ordenes);
+        addDoc(ordenesRef, order).then (result => setOrderId (result.Id))
+    }
+    if(orderId) {
+        return 
+        //<h1> {`Gracias por tu compra, tu Id de pedido es ${orderId}`} </h1>
+    }
+    return(
+        <form>
+            <label>name</label>
+            <input type="text" value = {name} onChange={(evento) => setName(evento.target.value)}/>
+            <label></label>
+            <input type="text" value = {email} onChange={(evento) => setEmail(evento.target.value)}/>
+            <label></label>
+            <input type="text" value = {phone} onChange={(evento) => setPhone(evento.target.value)}/>
+            <button onClick={crearOrden} type='submit'>Finalizar Compra</button>
         </form>
-    </div>
-    )
-}
+        )
+    }
 
 export default Checkout

@@ -5,8 +5,7 @@ import './ItemList.css'
 const ItemList = ({products}) => {
     return (
             <div className='card'>   
-                {products.map(product => <Item key={product.id} product={product}/> // spread de product
-                    )}
+                {products.map((product) => <Item key={product.id}{...product}/>)} 
             </div> 
         ) 
     }

@@ -8,7 +8,7 @@ const ItemDetailContainer = () => {// tiene la misma logica que itemlist pero tr
     const [loader, setLoader] = useState (false)
     const { id } = useParams () // trae el dato que yo quiero
     
-    useEffect (() =>{ // llamar a la funcion que llama a getItem
+    useEffect (() =>{ // llamar a la funcion que llama a getItem, guarda un producto
         setLoader (true)
         getItem(id) // getProductById
         .then((resp)=> setProducto (resp))
@@ -17,14 +17,14 @@ const ItemDetailContainer = () => {// tiene la misma logica que itemlist pero tr
     }, [id])
     
     return (
-        <div>
-            <h2 style={{fontSize:40, color:'blue', fontFamily: 'Times New Roman',}}>Estos son los productos que tenemos para tu mascota </h2>
+        <>
+            <h2 style={{fontSize:40, color:'blue', fontFamily: 'Times New Roman',}}>3Estos son los productos que tenemos para tu mascota </h2>
             <div className='prod'> 
             { loader ? <p style={{color:'black', fontSize:30}}>Cargando... </p> :
-            <ItemDetail producto={producto}/> 
+                <ItemDetail producto={producto}/> 
             }
             </div>
-        </div>
+        </>
     ) 
 }
 export default ItemDetailContainer
