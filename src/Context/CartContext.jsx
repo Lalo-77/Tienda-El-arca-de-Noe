@@ -11,7 +11,7 @@ export const CartProvider = ({children}) => {
 
     const addItem =(producto, quantity) => {
         if(!isInCart(producto.id)) {
-        //console.log('el producto ya esta agregado');
+        console.log('el producto ya esta agregado');
         setCart(cart.map((producto) => {
         if(producto.id ===producto){
             return {...producto, quantity: producto.quantity + quantity}

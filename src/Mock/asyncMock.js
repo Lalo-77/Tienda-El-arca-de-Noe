@@ -2,7 +2,7 @@ const productos = [
     {
     id:'01',
     name: 'plato acero',
-    img: 'https://i.postimg.cc/sXDY9djs/plato-acero.png',
+    img: '/img/plato acero.bmp',
     price: 1985,
     category: 'accesorios',
     stock: 20,
@@ -11,7 +11,7 @@ const productos = [
     {
     id:'02',
     name:'comedero doble',
-    img: 'https://i.postimg.cc/0NL6jTzV/comedero-doble.png',
+    img: '/img/comedero doble.bmp',
     price: 9590,
     category: 'accesorios',
     stock: 20,
@@ -20,7 +20,7 @@ const productos = [
     {
     id:'03',
     name:'bebedero hamster',
-    img:'https://i.postimg.cc/4xj4QzXd/bebedero-hamster.png',
+    img:'/img/bebedero hamster.bmp',
     price: 2500,
     category: 'accesorios',
     stock: 50,
@@ -29,7 +29,7 @@ const productos = [
     {
     id:'04',
     name:'collar luz leds',
-    img: 'https://i.postimg.cc/VLVzzjrR/collar-luz-leds.png',
+    img: '/img/collar luz leds.bmp',
     price: 4554,
     category: 'accesorios',
     stock: 50,
@@ -38,7 +38,7 @@ const productos = [
     {
     id:'05',
     name:'correa extensible 3m',
-    img: 'https://i.postimg.cc/PrLYYLZ4/correa-extensible-3m.png',
+    img: '/img/correa extensible 3m.bmp',
     price: 1914,
     category: 'accesorios',
     stock: 50,
@@ -47,7 +47,7 @@ const productos = [
     {
     id:'06',
     name: 'pretal arnes',
-    img: 'https://i.postimg.cc/RZ73Lw0c/pretal-arnes.jpg',
+    img: '/img/pretal-arnes.jpg',
     price: 4700,
     category: 'accesorios',
     stock: 30,
@@ -56,7 +56,7 @@ const productos = [
 {
     id:'07',
     name:'pelota',
-    img: 'https://i.postimg.cc/PJvJpwcv/pelota.png',
+    img: '/img/pelota.bmp',
     price: 2570,
     category: 'juguetes',
     stock: 30,
@@ -65,7 +65,7 @@ const productos = [
     {
     id:'08',
     name:'cucha',
-    img:'https://i.postimg.cc/YqgNTG9S/cama.png',
+    img:'/img/cucha.bmp',
     price: 11475,
     category: 'accesorios',
     stock: 20,
@@ -74,7 +74,7 @@ const productos = [
     {
     id:'09',
     name:'manta mascota',
-    img: 'https://i.postimg.cc/bvYQGmRG/manta-mascota.png',
+    img: '/img/manta mascota.bmp',
     price: 5400,
     category:'ropa',
     stock: 20,
@@ -83,7 +83,7 @@ const productos = [
     {
     id:'10',
     name:'bolso',
-    img:'https://i.postimg.cc/63gRmtxR/bolso.png',
+    img:'/img/bolso.bmp',
     price: 14175,
     category: 'accesorios',
     stock: 30,
@@ -92,7 +92,7 @@ const productos = [
     {
     id:'11',
     name: 'mochila',
-    img: 'https://i.postimg.cc/XN5yvM0H/mochila.png',
+    img: '/img/mochila.bmp',
     price: 25380,
     category: 'accesorios',
     stock: 20,
@@ -101,16 +101,16 @@ const productos = [
     {
     id:'12',
     name:'cepillo acero',
-    img:'https://i.postimg.cc/8cqJJxXp/cepillo-acero.png',
+    img:'/img/cepillo acero.bmp',
     price: 2250,
-    category: 'limpieza',
+    category:'limpieza',
     stock: 50,
     description:'cepillo ovalado de acero para perro',
     },
     {
     id:'13',
     name:'cepillo silicona',
-    img: 'https://i.postimg.cc/ZRnCfJ1Y/cepillo-silicona.png',
+    img: '/img/cepillo silicona.bmp',
     price: 1350,
     category: 'limpieza',
     stock: 50,
@@ -119,7 +119,7 @@ const productos = [
     {
     id:'14',
     name:'gorro orejas',
-    img: 'https://i.postimg.cc/2SX6Vs1P/gorro-orejas.png',
+    img: '/img/gorro orejas.bmp',
     price: 3375,
     category:'ropa',
     stock: 20,
@@ -128,7 +128,7 @@ const productos = [
     {
     id: '15',
     name: 'zapatillas',
-    img: 'https://i.postimg.cc/L8h4Kxxv/zapatillas.png',
+    img: '/img/zapatillas.bmp',
     price: 4340,
     category: 'ropa',
     stock: 20,

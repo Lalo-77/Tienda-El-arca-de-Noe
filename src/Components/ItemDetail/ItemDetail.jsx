@@ -6,16 +6,14 @@ import { useCart } from '../../Context/CartContext'
 
 const ItemDetail = ({producto, id, price}) => { // trae el producto 
 const {addItem, isInCart} = useCart() // tiene un objeto
-console.log(useCart);
-//const {quantityAdded, setQuantityAdded} = useState ('')
+
 const onAdd =(cantidad) => {
-    //setQuantityAdded(cantidad)
         const productAgreg = {
         id, name, price, cantidad
     }
     addItem(productAgreg,cantidad) 
     console.log(`agregaste al carrito ${cantidad} productos`)  
-    
+    //showNotification('success', `Se agrego correctamente ${cantidad} ${name}`)
     }
     // aca va function que se va a ejecutar hacer click para agregar al carrito
 return ( 
