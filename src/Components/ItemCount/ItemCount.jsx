@@ -1,19 +1,27 @@
 import React, { useState } from 'react'
 import '../ItemCount/ItemCount.css'
 
-const ItemCount = ({stock=50, onAdd, initial=1}) => {
+const ItemCount = ({ stock=50, onAdd, initial=1, modifiBy}) => {
 
     const [count, setCount] = useState(initial);
 
     const bajar = () => {
-        if(count > 1) {
-            setCount(count - 1)  
+        setCount((prev) => {
+            if(prev > 1) {
+                return prev - modifiBy;
+            }   else {
+                return prev;
+            }
+        });
         }
-    }
     const subir = () => {
-        if(count  < stock) {
-            setCount(count + 1)
-        }
+        setCount((prev) => {
+            if(count  < stock) {
+                return prev + modifiBy;
+            }   else {
+                return prev;
+            } 
+        });
     }
     return (
         <div className='sup-cont'>
@@ -22,7 +30,7 @@ const ItemCount = ({stock=50, onAdd, initial=1}) => {
                 <span className='contad'>{count}</span>
                 <button className='subir' onClick={subir}>+</button>
             </div>
-                <button className='comprar'disable={count === 0 } onClick={()=>onAdd(count)}> Comprar </button>
+                <button className='comprar' onClick={()=>onAdd(count)}> Comprar </button>
                 
         </div>  
     )

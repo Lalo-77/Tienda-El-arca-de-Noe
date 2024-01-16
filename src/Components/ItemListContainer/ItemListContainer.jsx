@@ -10,7 +10,7 @@ import { db } from '../../services/firebase'
 const ItemListContainer =({greeting}) => {
     const [products, setProducts] = useState ([]) // se guarda la respuesta,un array
     const [loading, setLoading] = useState(false)
-    const {categoryId} = useParams ()
+    const {categoryId} = useParams () 
 
     /* (() => {
         setLoading(true)
@@ -45,11 +45,10 @@ const ItemListContainer =({greeting}) => {
             setLoading(false)
         })
         },[categoryId])
-    /*if(loading) {
-        return <h1> Loading...</h1>
-    }*/
-
-            return ( // es una mascara del virtual dom
+    if(loading) {
+        return <h1 className='loading'>Cargando...</h1> // es una mascara del virtual dom
+    }
+            return ( 
             <>
                 { loading ? <p className='cargando'> Cargando ...</p>
                 : <div className='contenedor'>

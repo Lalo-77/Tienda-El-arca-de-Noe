@@ -1,14 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useCart } from '../../Context/CartContext'
+import './CartWiew.css'
 
-const CartWiew = (producto) => {
+const CartWiew = () => {
 
-const { cart, removeItem,total, } = useCart ()
+const { cart, removeItem, total } = useCart ()
+
     return (
         <>
             <h1>CARRITO</h1>
-                <div>
+                <div className='carComp'>
                     {
                     cart.map(producto => {
                         return (
@@ -16,15 +18,15 @@ const { cart, removeItem,total, } = useCart ()
                                 <h2>{producto.name}</h2>
                                 <p>Precio unidad: ${producto.price}</p>
                                 <p>Cantidad: {producto.quantity}</p>
-                                <p>Sub total: ${producto.quantity * producto.price}</p>
-                                <button onClick={() => removeItem(producto.id)}>X</button>
+                                <p>Sub total: ${producto.cantidad * producto.price}</p>
+                                <button className='btnRem' onClick={() => removeItem(producto.id)}>X</button>
                             </div>
                         )
                     })
                 }
                 </div>
-                <h1>Total de la compra: ${total}</h1>
-                <Link to='/checkout'>Checkout</Link>
+                <h1 className='total'>Total de la compra: ${total}</h1>
+                <Link to='/checkout' className='checkout'>Completa tus datos</Link>
         </>
     )
 }

@@ -2,7 +2,7 @@ const productos = [
     {
     id:'01',
     name: 'plato acero',
-    img: '/img/plato acero.bmp',
+    img: '/img/plato acero.jpg',
     price: 1985,
     category: 'accesorios',
     stock: 20,
@@ -11,7 +11,7 @@ const productos = [
     {
     id:'02',
     name:'comedero doble',
-    img: '/img/comedero doble.bmp',
+    img: '/img/comedero doble.jpg',
     price: 9590,
     category: 'accesorios',
     stock: 20,
@@ -20,7 +20,7 @@ const productos = [
     {
     id:'03',
     name:'bebedero hamster',
-    img:'/img/bebedero hamster.bmp',
+    img:'/img/bebedero hamster.jpg',
     price: 2500,
     category: 'accesorios',
     stock: 50,
@@ -29,7 +29,7 @@ const productos = [
     {
     id:'04',
     name:'collar luz leds',
-    img: '/img/collar luz leds.bmp',
+    img: '/img/collar luz leds.jpg',
     price: 4554,
     category: 'accesorios',
     stock: 50,
@@ -38,7 +38,7 @@ const productos = [
     {
     id:'05',
     name:'correa extensible 3m',
-    img: '/img/correa extensible 3m.bmp',
+    img: '/img/correa extensible 3m.jpg',
     price: 1914,
     category: 'accesorios',
     stock: 50,
@@ -56,7 +56,7 @@ const productos = [
 {
     id:'07',
     name:'pelota',
-    img: '/img/pelota.bmp',
+    img: '/img/pelota.jpg',
     price: 2570,
     category: 'juguetes',
     stock: 30,
@@ -65,7 +65,7 @@ const productos = [
     {
     id:'08',
     name:'cucha',
-    img:'/img/cucha.bmp',
+    img:'/img/cucha.jpg',
     price: 11475,
     category: 'accesorios',
     stock: 20,
@@ -74,7 +74,7 @@ const productos = [
     {
     id:'09',
     name:'manta mascota',
-    img: '/img/manta mascota.bmp',
+    img: '/img/manta mascota.jpg',
     price: 5400,
     category:'ropa',
     stock: 20,
@@ -83,7 +83,7 @@ const productos = [
     {
     id:'10',
     name:'bolso',
-    img:'/img/bolso.bmp',
+    img:'/img/bolso.jpg',
     price: 14175,
     category: 'accesorios',
     stock: 30,
@@ -92,7 +92,7 @@ const productos = [
     {
     id:'11',
     name: 'mochila',
-    img: '/img/mochila.bmp',
+    img: '/img/mochila.jpg',
     price: 25380,
     category: 'accesorios',
     stock: 20,
@@ -101,7 +101,7 @@ const productos = [
     {
     id:'12',
     name:'cepillo acero',
-    img:'/img/cepillo acero.bmp',
+    img:'/img/cepillo acero.jpg',
     price: 2250,
     category:'limpieza',
     stock: 50,
@@ -110,7 +110,7 @@ const productos = [
     {
     id:'13',
     name:'cepillo silicona',
-    img: '/img/cepillo silicona.bmp',
+    img: '/img/cepillo silicona.jpg',
     price: 1350,
     category: 'limpieza',
     stock: 50,
@@ -119,7 +119,7 @@ const productos = [
     {
     id:'14',
     name:'gorro orejas',
-    img: '/img/gorro orejas.bmp',
+    img: '/img/gorro orejas.jpg',
     price: 3375,
     category:'ropa',
     stock: 20,
@@ -128,7 +128,7 @@ const productos = [
     {
     id: '15',
     name: 'zapatillas',
-    img: '/img/zapatillas.bmp',
+    img: '/img/zapatillas.jpg',
     price: 4340,
     category: 'ropa',
     stock: 20,

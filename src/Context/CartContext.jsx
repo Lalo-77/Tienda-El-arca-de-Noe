@@ -7,22 +7,15 @@ isInCart: () => {}
 })
 
 export const CartProvider = ({children}) => {
-    const [cart, setCart] = useState ([])
+const [cart, setCart] = useState ([])
 
-    const addItem =(producto, quantity) => {
-        if(!isInCart(producto.id)) {
-        console.log('el producto ya esta agregado');
-        setCart(cart.map((producto) => {
-        if(producto.id ===producto){
-            return {...producto, quantity: producto.quantity + quantity}
-        }else{
-            return producto
-        }
-    }))
-    }else {
-        setCart([...cart, {...producto, quantity}])
+const addItem =(producoToAdd) => {
+    if(!isInCart(producoToAdd.id)) {
+        setCart((prev) => [...prev, producoToAdd]);
+        } else {
+        console.error("El producto ya esta agregado");
     }
-}
+};
 const clear = () => {
     setCart ([])
 }
@@ -33,14 +26,20 @@ const isInCart = (productId) => {
 const getItem = (productId) => {
 }
 const removeItem = (productId)=> {
-    setCart(cart.filter(item => item.id !== productId))
+    const cartUpdated = cart.filter(item => item.id !== productId)
+    setCart(cartUpdated)
 }
 const cartQuantity = () => { // suma la cantidad
     return cart.reduce ((acc, item) => acc + item.quantity, 0)
 }
-const total = () => { // suma el total
-    return cart.reduce ((acc, item) => acc + item.quantity * item.price,0)
+const getTotal = () => { 
+    let accu = 0;
+    cart.forEach((prod) => {
+        accu += prod.price * prod.cantidad;
+    });
+    return accu;
 }
+const total = getTotal() // suma el total
 
 return (
     <CartContext.Provider value={{cart, addItem, clear, removeItem, isInCart, getItem, cartQuantity,total }}>

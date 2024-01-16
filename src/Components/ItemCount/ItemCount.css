@@ -47,16 +47,6 @@
     font-size: 1rem;
     font-weight: 600;
 }
-.finalComp {
-    background-color:crimson;
-    color:lime;
-    border:none;
-    border-radius: 20px;
-    font-size: 1rem;
-    font-weight: 600;
-    width: 100px;
-    height: 40px;
-}
 .eliminar{
     background-color:crimson;
     color:lime;

@@ -1,0 +1,53 @@
+.form{
+    width: 2000px;
+    height: 100vh;
+    background-color: burlywood;
+}
+.formulario{
+    width: 500px;
+    height: 70px;
+    color: black;
+    font-size: 30px;
+    font-weight: 30px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.pila{
+    width: 100px;
+    height: 70px;
+    color:black;
+    font-size: 20px;
+    font-weight: 20px;
+}
+.nombYap{
+    width: 150px;
+    height: 20px;
+}
+.email{
+        width: 100px;
+        height: 70px;
+        color:black;
+        font-size: 20px;
+        font-weight: 20px;
+}
+.correo{
+    width: 150px;
+    height: 20px;
+}
+.telefono{
+        width: 100px;
+        height: 70px;
+        color:black;
+        font-size: 20px;
+        font-weight: 20px;
+}
+.tel{
+    width: 150px;
+    height: 20px;
+}
+.crearOrden{
+    width: 150px;
+    height: 40px;
+    padding-left:20px;
+    background-color:darkred;
+    border-radius: 20px;
+}

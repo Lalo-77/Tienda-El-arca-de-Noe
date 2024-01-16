@@ -1,5 +1,5 @@
 import React,{ useEffect, useState } from 'react' 
-import { getItem } from '../../Mock/asyncMock'
+//import { getItem } from '../../Mock/asyncMock'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { useParams } from 'react-router-dom' 
 import { getDoc,doc } from 'firebase/firestore'
@@ -32,7 +32,7 @@ const ItemDetailContainer = () => { // tiene la misma logica que itemlist pero t
         }, [id])*/
     }, [id])
     if(loader) {
-        return <h1>Loader</h1>
+        return <h1 style={{color:'black'}}>Cargando...</h1>
     }
 
     return (
@@ -40,7 +40,7 @@ const ItemDetailContainer = () => { // tiene la misma logica que itemlist pero t
             <h2 style={{fontSize:40, color:'blue', fontFamily: 'Times New Roman',}}>Estos son los productos que tenemos para tu mascota </h2>
             <div className='prod'> 
             { loader ? <p style={{color:'black', fontSize:30}}>Cargando... </p> :
-                <ItemDetail producto={producto}/> 
+                <ItemDetail {...producto}/> 
             }
             </div>
         </>

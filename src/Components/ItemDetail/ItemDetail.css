@@ -29,7 +29,7 @@ border: 6px solid;
 }
 .img{
     width: 400px;
-    height: 400px;
+    height: 350px;
 }
 .descripcion{
     width: 400px;
@@ -52,10 +52,15 @@ border: 6px solid;
     height: 20px;
 font-family:Arial, Helvetica, sans-serif;
 }
-.carrito{
-    text-decoration: none;
-    color: black;
-    font-size: 16px;
-    font-weight: 20px;
-    font-family: Arial, Helvetica, sans-serif
+.finalCompra{
+        background-color:crimson;
+        color:lime;
+        width: 200px;
+        height: 40px;
+        text-decoration: none;
+        text-align: center;
+        border:none;
+        border-radius: 20px;
+        font-size: 1rem;
+        font-weight: 600;
 }
