@@ -18,12 +18,13 @@
     height: 30px;
 }
 .contad{
-    width: 10px;
+    width: 50px;
     height: 10px;
     color:black;
     padding: 10px;
     font-size:20px;
     margin-bottom: 20px;
+    text-align: center;
 }
 .subir{
     background-color:crimson;

@@ -19,7 +19,7 @@
     font-weight: 20px;
 }
 .nombYap{
-    width: 150px;
+    width: 200px;
     height: 20px;
 }
 .email{
@@ -44,10 +44,20 @@
     width: 150px;
     height: 20px;
 }
-.crearOrden{
+.createOrden{
     width: 150px;
-    height: 40px;
+    height: 30px;
     padding-left:20px;
-    background-color:darkred;
+    background-color:firebrick;
     border-radius: 20px;
+}
+.numComp{
+    width: 100%;
+    width: 500px;
+    color: black;
+}
+.exito{
+    width: 100%;
+    width: 500px;
+    color: black;
 }

@@ -19,6 +19,9 @@ const addItem =(producoToAdd) => {
 const clear = () => {
     setCart ([])
 }
+const clearCart = () => {
+    setCart([])
+}
 const isInCart = (productId) => {
     return cart.some(producto => producto.id === productId)
     }
@@ -42,7 +45,7 @@ const getTotal = () => {
 const total = getTotal() // suma el total
 
 return (
-    <CartContext.Provider value={{cart, addItem, clear, removeItem, isInCart, getItem, cartQuantity,total }}>
+    <CartContext.Provider value={{cart, addItem, clear, removeItem, isInCart, getItem, cartQuantity, total, clearCart }}>
         {children}
     </CartContext.Provider>
     )}
