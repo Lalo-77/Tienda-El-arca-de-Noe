@@ -3,6 +3,7 @@ import ItemCount from '../ItemCount/ItemCount'
 import './ItemDetail.css'
 import {Link} from 'react-router-dom'
 import { useCart } from '../../Context/CartContext'
+import {Toaster, toast} from 'sonner'
 
 const ItemDetail = ({name, category, img, id, price, description }) => { // trae el producto 
 const {addItem, isInCart} = useCart() // tiene un objeto
@@ -12,8 +13,7 @@ const onAdd =(cantidad) => {
         id, name, price, cantidad
     }
     addItem(productAgreg,cantidad) 
-    console.log(`agregaste al carrito ${cantidad} productos`)  
-    //showNotification('success', `Se agrego correctamente ${cantidad} ${name}`)
+    toast.success(`agregaste al carrito ${cantidad} productos`)  
     }
     // aca va function que se va a ejecutar hacer click para agregar al carrito
 return ( 
@@ -30,7 +30,7 @@ return (
                 <ItemCount initial={1} modifiBy={1} onAdd={onAdd}/>
             )
         }
-    </div>
+    </div> 
     )
 } 
 export default ItemDetail

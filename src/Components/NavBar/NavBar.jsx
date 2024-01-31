@@ -7,7 +7,7 @@ const NavBar = () => {
 
     return (
             <nav className='navBar'>
-                <Link to={'/'} className='link' >El Arca de Noe</Link>
+                <NavLink to={'/'} className='link' >El Arca de Noe</NavLink>
                     <img className='barco' src='https://i.postimg.cc/0NqcQGzF/barco.png' alt='logo'/>
                 <section className='categorias'>
                     <h1 className='tit'>Tienda de Mascotas</h1>

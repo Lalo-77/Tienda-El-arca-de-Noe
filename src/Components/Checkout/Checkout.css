@@ -1,37 +1,46 @@
+.CH1{
+    color:black
+}
 .form{
-    width: 2000px;
-    height: 100vh;
-    background-color: burlywood;
+    width: 1000px;
+    height: 500px;
+    background-color:cornflowerblue;
 }
 .formulario{
     width: 500px;
-    height: 70px;
+    height: 100px;
     color: black;
     font-size: 30px;
     font-weight: 30px;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
-.pila{
+/*.pila{
     width: 100px;
     height: 70px;
     color:black;
     font-size: 20px;
     font-weight: 20px;
+}*/
+.nombreYap{
+    color: black;
+    font-size: 20px;
+    font-weight: 20px;
 }
-.nombYap{
-    width: 200px;
-    height: 20px;
+.nombYapellido{
+    color:white;
 }
 .email{
-        width: 100px;
-        height: 70px;
         color:black;
         font-size: 20px;
         font-weight: 20px;
 }
 .correo{
-    width: 150px;
-    height: 20px;
+    color: black;
+    font-size: 20px;
+    font-weight: 20px;
+}
+.corr{
+    color:white;
 }
 .telefono{
         width: 100px;
@@ -41,23 +50,28 @@
         font-weight: 20px;
 }
 .tel{
-    width: 150px;
-    height: 20px;
+    color: black;
 }
-.createOrden{
+.tele{
+    color:white;
+}
+.createOrder{
     width: 150px;
     height: 30px;
     padding-left:20px;
     background-color:firebrick;
     border-radius: 20px;
-}
-.numComp{
-    width: 100%;
-    width: 500px;
     color: black;
 }
 .exito{
+    width: 200px;
     width: 100%;
-    width: 500px;
     color: black;
+    background-color: aqua;
+}
+.nroComp{
+    width: 200px;
+    width: 100%;
+    color: black;
+    background-color: aqua;
 }

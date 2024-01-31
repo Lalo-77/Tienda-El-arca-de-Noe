@@ -6,9 +6,10 @@ import '../ItemListContainer/ItemListContainer.css'
 import { useParams } from 'react-router-dom'
 import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebase'
+import { Toaster, toast } from 'sonner'
 
 const ItemListContainer =({greeting}) => {
-    const [products, setProducts] = useState ([]) // se guarda la respuesta,un array
+    const [productos, setProductos] = useState ([]) // se guarda la respuesta,un array
     const [loading, setLoading] = useState(false)
     const {categoryId} = useParams () 
 
@@ -25,21 +26,22 @@ const ItemListContainer =({greeting}) => {
             .catch((error)=> console.log(error))
             .finally(()=> setLoading(false))
     },[categoryId])*/
+
     useEffect(() => {
         setLoading(true)
         const collectionProd = categoryId 
             ? query(collection(db, "productos"), where ('category', '==', categoryId))
             : collection(db, "productos")
-        getDocs(collectionProd) //retorna una promesa
-        .then(querySnapshot => {
-        const productosAdap = querySnapshot.docs.map(doc => {
-            const fields = doc.data()
-            return { id: doc.id,...fields }
+        getDocs(collectionProd) // retorna una promesa- de donde va a sacar los documentos a los productos 
+            .then(querySnapshot => {
+                const productosAdap = querySnapshot.docs.map(doc => {
+                const fields = doc.data()
+                return { id: doc.id,...fields } 
             })
-            setProducts(productosAdap)
-        })
+            setProductos(productosAdap)
+        }) 
         .catch(error => {
-            console.log(error)
+            toast.error(error)
         }) 
         .finally(() => {
             setLoading(false)
@@ -52,12 +54,13 @@ const ItemListContainer =({greeting}) => {
             <>
                 { loading ? <p className='cargando'> Cargando ...</p>
                 : <div className='contenedor'>
-                    <h1 style={{width:1000}} className='nombreTienda'>{greeting} <span>{categoryId && categoryId}</span>El Arca</h1>
+                    <h1 style={{width:1000}} className='nombreTienda'>{greeting} <span>{categoryId && categoryId}</span></h1>
                     <Principal/>
-                    <ItemList products={products}/>
+                    <ItemList productos={productos}/>
                 </div>
             }
             </>
             )
         }
+        <Toaster />
 export default ItemListContainer

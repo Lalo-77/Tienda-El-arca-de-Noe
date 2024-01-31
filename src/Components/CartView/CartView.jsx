@@ -6,8 +6,7 @@ import { Toaster,toast } from 'sonner'
 
 const CartView = () => {
 
-const { cart, total, removeItem  } = useCart ()
-
+const { cart, total, removeItem ,clear } = useCart ()
     return (
         <div className='cont'>
             <h1 className='carrito'>CARRITO</h1>
@@ -15,23 +14,30 @@ const { cart, total, removeItem  } = useCart ()
                     {
                     cart.map(producto => {
                         return (
-                            <div key={producto.id} className='detalle' >
-                                <h2 className='nombre'>{producto.name}</h2>
-                                <p className='cant'>Cantidad: {producto.quantity}</p>
-                                <p className='prec'>Precio unidad: ${producto.price}</p>
-                                <p className='subtotal'>Sub total: ${producto.cantidad * producto.price}</p>
-                                <button className='btnRem' onClick={() => removeItem(producto.id) (toast.warning('El producto se elimino del carrito'))}>X</button>
-                                <Toaster/>
+                            <div> 
+                                <div key={producto.id} className='detalle'>
+                                    <h2 className='nombre'> Producto: {producto.name} </h2>
+                                    <p className='cant'> Cantidad: {producto.cantidad}</p>
+                                    <p className='prec'> Precio unidad: ${producto.price} </p>
+                                    <p className='subtotal'> Sub total: ${producto.cantidad * producto.price} </p>
+                                    <button className='btnRem' onClick={() => (removeItem(producto.id)) (toast.warning('El producto se elimino')) } >X</button>
+                                    <Toaster position="top-right" expand={true} />
+                                </div>
                             </div>
-                        ) 
+                        )   
                     })
-                }
+                } 
                 </div>
-                <h1 className='total'>Total de la compra: ${total}</h1>
-                <div className='check'>
-                    <Link to='/checkout'  className='checkout'>Completa tus datos</Link>
-                </div>
-                
+                        <h1 className='total'>Total de la compra: ${total}</h1>
+                        <br></br>
+                            <div className='check'>
+                                <Link to='/Checkout' className='checkout'> Terminar Compra</Link>
+                                <button onClick= { () => (clear) (toast.info('tu carrito esta vacio')) } className='btn-Vac' > Vaciar Carrito</button>
+                            </div>
+                            <div className='final'>
+                                <h2 className='mensaje'> Tu carrito esta vacio !</h2>
+                                <Link to= '/' className='shopping'>Ir a comprar </Link>
+                            </div>
         </div>
     )
 }

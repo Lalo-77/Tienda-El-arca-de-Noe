@@ -142,7 +142,7 @@ export const getProducts = () => { // trae los productos
             if (error) {
                 reject('No Hay datos, intente en unos minutos...')
             }else {
-                resolve(productos)
+                resolve(productos) 
             }
         }, 2000)
     }) 

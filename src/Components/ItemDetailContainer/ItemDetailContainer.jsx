@@ -47,4 +47,3 @@ const ItemDetailContainer = () => { // tiene la misma logica que itemlist pero t
     ) 
 }
 export default ItemDetailContainer
-

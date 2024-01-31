@@ -9,9 +9,9 @@ isInCart: () => {}
 export const CartProvider = ({children}) => {
 const [cart, setCart] = useState ([])
 
-const addItem =(producoToAdd) => {
-    if(!isInCart(producoToAdd.id)) {
-        setCart((prev) => [...prev, producoToAdd]);
+const addItem =(productoToAdd) => {
+    if(!isInCart(productoToAdd)) {
+        setCart((prev) => [...prev, productoToAdd]);
         } else {
         console.error("El producto ya esta agregado");
     }
